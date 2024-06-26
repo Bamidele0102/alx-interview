@@ -15,28 +15,18 @@ def pascal_triangle(n):
     if n <= 0:
         return []
 
-    # Initialize the triangle with the first row (containing 1)
+    # Initialize the triangle with the first row
     triangle = [[1]]
 
     # Loop through remaining rows (1 to n-1)
     for i in range(1, n):
         # Create a new row list
-        new_row = []
-
-        # First element of each row is always 1
-        new_row.append(1)
+        new_row = [1] * (i + 1)
 
         # Iterate through the previous row to calculate elements
         for j in range(1, i):
             # Element at position j is the sum of elements above it
-            previous_row = triangle[i-1]
-            new_row.append(previous_row[j-1] + previous_row[j])
-
-        # Last element of each row is always 1
-        new_row.append(1)
-
-        # Append the new row to the triangle
+            new_row[j] = triangle[i-1][j-1] + triangle[i-1][j]
         triangle.append(new_row)
 
-    # Return the generated Pascal's triangle
     return triangle
