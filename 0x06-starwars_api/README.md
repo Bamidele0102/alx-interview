@@ -62,7 +62,7 @@ Write a script that prints all characters of a Star Wars movie:
 - You must use the [Star wars API](https://alx-intranet.hbtn.io/rltoken/ds__tvEZ4DuMVv5VKkRUCA "Star wars API")
 - You must use the `request` module
 
-```
+```bash
 alexa@ubuntu:~/0x06$ ./0-starwars_characters.js 3
 Luke Skywalker
 C-3PO
